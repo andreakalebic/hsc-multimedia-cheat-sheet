@@ -1,0 +1,668 @@
+/* ============================================
+   HSC MULTIMEDIA CHEAT SHEET 2026
+   Inspired by Gabrielle Adam's Editorial Style
+   ============================================ */
+
+:root {
+    --bg-primary: #F5F3EE;
+    --text-primary: #2D2D2D;
+    --accent-sage: #6C7A6B;
+    --accent-clay: #B98B73;
+    --accent-blue: #7D8796;
+    --white: #FFFFFF;
+    --grid-gap: 2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+    color: var(--accent-sage);
+}
+
+h3 {
+    font-size: clamp(1.3rem, 2vw, 1.8rem);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--accent-blue);
+}
+
+h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    max-width: 70ch;
+}
+
+/* ============================================
+   LAYOUT - GRID SYSTEM
+   ============================================ */
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gap);
+    margin-bottom: 4rem;
+}
+
+.col-12 { grid-column: span 12; }
+.col-8 { grid-column: span 8; }
+.col-6 { grid-column: span 6; }
+.col-4 { grid-column: span 4; }
+.col-3 { grid-column: span 3; }
+
+@media (max-width: 768px) {
+    .col-8, .col-6, .col-4, .col-3 {
+        grid-column: span 12;
+    }
+}
+
+/* ============================================
+   HEADER / NAVIGATION
+   ============================================ */
+
+header {
+    background: var(--white);
+    border-bottom: 1px solid rgba(45, 45, 45, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+nav {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-sage);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 2rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, var(--bg-primary) 0%, #E8E6E1 100%);
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--accent-sage);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    margin-bottom: 1.5rem;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    color: var(--accent-blue);
+    margin-bottom: 2rem;
+    max-width: 100%;
+}
+
+.countdown {
+    display: inline-block;
+    background: var(--accent-clay);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* ============================================
+   PRIORITY CARDS
+   ============================================ */
+
+.priority-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.priority-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid var(--accent-sage);
+}
+
+.priority-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.priority-card.critical {
+    border-left-color: #E74C3C;
+}
+
+.priority-card.high {
+    border-left-color: #F39C12;
+}
+
+.priority-card.moderate {
+    border-left-color: var(--accent-blue);
+}
+
+.priority-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.priority-badge.critical {
+    background: #FADBD8;
+    color: #C0392B;
+}
+
+.priority-badge.high {
+    background: #FCF3CF;
+    color: #D68910;
+}
+
+.priority-badge.moderate {
+    background: #D6EAF8;
+    color: #2874A6;
+}
+
+.priority-card h3 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.priority-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.card-link {
+    display: inline-block;
+    color: var(--accent-sage);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.card-link:hover {
+    color: var(--accent-clay);
+}
+
+/* ============================================
+   CONTENT SECTIONS
+   ============================================ */
+
+.section {
+    margin: 6rem 0;
+}
+
+.section-header {
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--accent-sage);
+}
+
+.content-block {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* ============================================
+   GLOSSARY
+   ============================================ */
+
+.glossary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.glossary-term {
+    background: var(--bg-primary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 3px solid var(--accent-sage);
+}
+
+.glossary-term dt {
+    font-weight: 700;
+    color: var(--accent-sage);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.glossary-term dd {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* ============================================
+   TABLES
+   ============================================ */
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.comparison-table thead {
+    background: var(--accent-sage);
+    color: var(--white);
+}
+
+.comparison-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+.comparison-table td {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(45, 45, 45, 0.1);
+}
+
+.comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
+.comparison-table tr:hover {
+    background: var(--bg-primary);
+}
+
+/* ============================================
+   FORMULA BOXES
+   ============================================ */
+
+.formula-box {
+    background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-sage) 100%);
+    color: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.formula-box h4 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.formula {
+    font-family: 'Courier New', monospace;
+    font-size: 1.2rem;
+    background: rgba(255,255,255,0.2);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.formula-example {
+    background: rgba(255,255,255,0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+/* ============================================
+   QUESTION BLOCKS
+   ============================================ */
+
+.question-block {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--accent-clay);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.question-type {
+    background: var(--accent-clay);
+    color: var(--white);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.marks-badge {
+    background: var(--accent-blue);
+    color: var(--white);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.question-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.answer-section {
+    background: var(--bg-primary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.answer-label {
+    font-weight: 700;
+    color: var(--accent-sage);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.peel-breakdown, .steel-breakdown {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--white);
+    border-radius: 8px;
+}
+
+.peel-breakdown h5, .steel-breakdown h5 {
+    color: var(--accent-sage);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.peel-point, .steel-point {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--accent-clay);
+}
+
+.peel-point strong, .steel-point strong {
+    color: var(--accent-clay);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+/* ============================================
+   CALLOUT BOXES
+   ============================================ */
+
+.callout {
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    border-left: 4px solid;
+}
+
+.callout.warning {
+    background: #FFF3CD;
+    border-color: #F39C12;
+    color: #856404;
+}
+
+.callout.tip {
+    background: #D1ECF1;
+    border-color: #17A2B8;
+    color: #0C5460;
+}
+
+.callout.critical {
+    background: #F8D7DA;
+    border-color: #E74C3C;
+    color: #721C24;
+}
+
+.callout.success {
+    background: #D4EDDA;
+    border-color: #28A745;
+    color: #155724;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: var(--accent-sage);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: #5A6859;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-secondary {
+    background: var(--accent-clay);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background: #A67A64;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+    background: var(--text-primary);
+    color: var(--white);
+    padding: 3rem 2rem;
+    margin-top: 6rem;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-content p {
+    margin-bottom: 0.5rem;
+    max-width: 100%;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.footer-links a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent-clay);
+}
+
+/* ============================================
+   UTILITIES
+   ============================================ */
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mb-3 { margin-bottom: 3rem; }
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mt-3 { margin-top: 3rem; }
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .hero {
+        min-height: 60vh;
+        padding: 2rem 1rem;
+    }
+    
+    .priority-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .content-block {
+        padding: 1.5rem;
+    }
+    
+    .glossary-grid {
+        grid-template-columns: 1fr;
+    }
+}
