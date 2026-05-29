@@ -1,0 +1,95 @@
+bash
+
+cat > /mnt/user-data/outputs/multimedia-hsc/www.html << 'HTMLEOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Wide Web — HSC Multimedia</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">📱 HSC Multimedia</a>
+  <div class="nav-links">
+    <a href="index.html">🏠 Home</a><a href="graphics.html">🖼 Graphics</a><a href="audio.html">🔊 Audio</a><a href="video.html">🎬 Video</a><a href="animation.html">✨ Animation &amp; VR</a><a href="www.html">🌐 WWW</a><a href="industry.html">🏢 Industry Study</a><a href="ethics.html">⚖️ IP &amp; Ethics</a><a href="sectors.html" class="never">★ Sectors</a><a href="careers.html" class="never">★ Careers</a>
+  </div>
+</nav>
+<div class="page-wrap">
+  <a href="index.html" class="back-link">← Back to Home</a>
+  <div class="page-hero">
+    <div class="page-hero-tag tag-core">🌐 Frequent — streaming, buffering, censorship all tested</div>
+    <h1>World Wide Web</h1>
+    <p>Protocols, streaming vs buffering, web censorship and filtering, web design elements, and optimising multimedia files for the web.</p>
+  </div>
+  <div class="sec-label">Protocols &amp; transfer</div>
+  <div class="grid-2" style="margin-bottom:1rem;">
+    <div class="card">
+      <h3>Key Web Protocols</h3>
+      <div class="term"><span class="term-key tk-purple">HTTP</span><span class="term-def">HyperText Transfer Protocol — standard for transferring web pages and files. Downloads the complete file before it plays.</span></div>
+      <div class="term"><span class="term-key tk-purple">HTTPS</span><span class="term-def">Secure HTTP — encrypted with SSL/TLS certificates. Required for any site handling personal data or payments.</span></div>
+      <div class="term"><span class="term-key tk-purple">RTSP</span><span class="term-def">Real-Time Streaming Protocol — maintains an ongoing connection for live streaming. Acts like a remote control for media streams.</span></div>
+      <div class="term"><span class="term-key tk-purple">FTP</span><span class="term-def">File Transfer Protocol — uploading and downloading files between local computers and remote servers</span></div>
+      <div class="term"><span class="term-key tk-purple">DNS</span><span class="term-def">Domain Name System — translates human-readable domain names (e.g. google.com) into numerical IP addresses</span></div>
+    </div>
+    <div class="card">
+      <h3>Streaming &amp; Buffering</h3>
+      <div class="term"><span class="term-key tk-blue">Streaming</span><span class="term-def">Media that plays as it downloads in real time — does not require the full file to download first. Requires a consistent connection speed above the stream's bit rate.</span></div>
+      <div class="term"><span class="term-key tk-blue">Buffering</span><span class="term-def">Pre-loading a portion of the video or audio ahead of the current playback position. Prevents interruption if connection speed temporarily drops.</span></div>
+      <div class="term"><span class="term-key tk-blue">Bandwidth</span><span class="term-def">Maximum data transfer capacity of a network connection — measured in Mbps. Shared among all devices on the same network.</span></div>
+      <div class="term"><span class="term-key tk-blue">Webcasting</span><span class="term-def">Live streaming of audio/video over the internet to multiple simultaneous viewers in real time</span></div>
+      <div class="term"><span class="term-key tk-blue">Bitrate</span><span class="term-def">Amount of video/audio data processed per second (Mbps/kbps). Higher bitrate = better quality but larger file and higher bandwidth requirement</span></div>
+    </div>
+  </div>
+  <div class="sec-label">Censorship &amp; access</div>
+  <div class="grid-2" style="margin-bottom:1rem;">
+    <div class="card">
+      <h3>Web Filtering Technologies</h3>
+      <div class="term"><span class="term-key tk-amber">Proxy server</span><span class="term-def">Intermediary server that all web requests pass through — can filter content using allow/block lists. Used extensively in schools and workplaces.</span></div>
+      <div class="term"><span class="term-key tk-amber">URL filtering</span><span class="term-def">Blocks access to websites based on their address or domain name — uses regularly updated lists of blocked sites</span></div>
+      <div class="term"><span class="term-key tk-amber">Content filtering</span><span class="term-def">Scans page content for keywords and patterns — can block pages containing inappropriate terms</span></div>
+      <div class="term"><span class="term-key tk-amber">Circumvention</span><span class="term-def">Using a secondary proxy or VPN to mask the actual destination URL — allows users to bypass proxy filtering</span></div>
+      <div class="term"><span class="term-key tk-amber">Age controls</span><span class="term-def">Software or device settings limiting content access based on age rating — parental controls in homes, age verification on websites</span></div>
+      <div class="term"><span class="term-key tk-amber">Classification</span><span class="term-def">Australian content ratings: G, PG, M, MA15+, R18+, X18+ — legal requirement for commercial multimedia content</span></div>
+    </div>
+    <div class="card">
+      <h3>Web Design Elements</h3>
+      <div class="term"><span class="term-key tk-teal">Site map</span><span class="term-def">Visual diagram showing all pages and their hierarchical relationships — planning tool and navigation aid</span></div>
+      <div class="term"><span class="term-key tk-teal">Hyperlink</span><span class="term-def">Clickable text or image that navigates to another URL, page section, or file. Essential navigation element.</span></div>
+      <div class="term"><span class="term-key tk-teal">Thumbnail</span><span class="term-def">Small preview version of a larger image — reduces page load time; user clicks to see full-size version</span></div>
+      <div class="term"><span class="term-key tk-teal">Progressive JPEG</span><span class="term-def">Loads image at low quality first, then progressively sharpens — better user experience on slow connections</span></div>
+      <div class="term"><span class="term-key tk-teal">Cookie</span><span class="term-def">Small file stored on the user's device by a website — tracks login sessions, preferences, and browsing behaviour</span></div>
+      <div class="term"><span class="term-key tk-teal">Responsive design</span><span class="term-def">Website layout adapts to screen size — essential for mobile devices, tablets, and desktops</span></div>
+    </div>
+  </div>
+  <div class="sec-label">Practice questions</div>
+  <div class="q-block">
+    <div class="q-header"><span class="q-type-badge qb-short">Short Answer</span><span class="q-marks">2 marks</span></div>
+    <div class="q-text">Outline why a PNG file format would be used instead of JPEG for a website logo.</div>
+    <button class="q-expand-btn"><span class="arrow">▶</span> Show model answer</button>
+    <div class="q-answer"><p>PNG supports lossless compression, ensuring the logo retains its crisp edges and precise colours without any compression artefacts — especially important for text within logos. <span class="mark-chip">1 mark</span></p><p style="margin-top:0.5rem;">PNG also supports alpha channel transparency, allowing the logo to be placed over any background colour or image on the website without a visible rectangular background box. <span class="mark-chip mk-2">1 mark</span></p></div>
+  </div>
+  <div class="q-block">
+    <div class="q-header"><span class="q-type-badge qb-ext">Extended Response</span><span class="q-marks">4 marks</span></div>
+    <div class="q-text">Identify and discuss technologies used at school and at home to manage student access to inappropriate content on the internet.</div>
+    <button class="q-expand-btn"><span class="arrow">▶</span> Show model answer</button>
+    <div class="q-answer">
+      <div class="model-label ml-peel">PEEL Format</div>
+      <div class="peel-block">
+        <div class="peel-row p-p"><div class="peel-letter">P</div><div class="peel-content">Both schools and homes use filtering technologies to restrict student access to inappropriate internet content, though the specific technologies and their effectiveness differ between these environments. <span class="mark-chip">1 mark</span></div></div>
+        <div class="peel-row p-e1"><div class="peel-letter">E</div><div class="peel-content">Schools commonly use proxy servers — intermediary servers that all student internet traffic passes through. The proxy uses allow and block lists to permit or deny access to specific URLs and content categories. These are generally effective for most students, though they can sometimes block useful educational resources and can be circumvented using a secondary proxy or VPN to mask the true destination. <span class="mark-chip mk-2">1 mark</span></div></div>
+        <div class="peel-row p-e2"><div class="peel-letter">E</div><div class="peel-content">At home, parents commonly use software-based URL filtering that blocks websites containing inappropriate domain suffixes or keywords. However, this method has limitations — it struggles to filter inappropriate content delivered through images and video, and technically savvy students can disable or circumvent it. Dedicated parental control apps on devices (such as Apple Screen Time or Google Family Link) provide additional controls including age-based content restrictions and usage time limits. <span class="mark-chip mk-2">1 mark</span></div></div>
+        <div class="peel-row p-l"><div class="peel-letter">L</div><div class="peel-content">Both approaches require ongoing maintenance and updates to remain effective as websites and circumvention methods continually evolve. Neither technology provides a complete solution — they are most effective when combined with education and open communication about appropriate internet use. <span class="mark-chip mk-3">1 mark</span></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer><p>HSC Multimedia Technologies Study Hub &nbsp;·&nbsp; WWW &nbsp;·&nbsp; For educational use only</p></footer>
+<script src="nav.js" defer></script>
+</body></html>
+HTMLEOF
+echo "www done"
+Output
+
+www done
