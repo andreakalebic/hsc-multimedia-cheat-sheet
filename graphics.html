@@ -1,0 +1,195 @@
+bash
+
+cat > /mnt/user-data/outputs/multimedia-hsc/graphics.html << 'HTMLEOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graphics, Files &amp; Compression — HSC Multimedia</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">📱 HSC Multimedia</a>
+  <div class="nav-links">
+    <a href="index.html">🏠 Home</a>
+    <a href="graphics.html">🖼 Graphics</a>
+    <a href="audio.html">🔊 Audio</a>
+    <a href="video.html">🎬 Video</a>
+    <a href="animation.html">✨ Animation &amp; VR</a>
+    <a href="www.html">🌐 WWW</a>
+    <a href="industry.html">🏢 Industry Study</a>
+    <a href="ethics.html">⚖️ IP &amp; Ethics</a>
+    <a href="sectors.html" class="never">★ Sectors</a>
+    <a href="careers.html" class="never">★ Careers</a>
+  </div>
+</nav>
+<div class="page-wrap">
+  <a href="index.html" class="back-link">← Back to Home</a>
+  <div class="page-hero">
+    <div class="page-hero-tag tag-hot">🖼️ Very Frequent — appears most years</div>
+    <h1>Graphics, Files &amp; Compression</h1>
+    <p>Vector vs bitmap, lossless vs lossy compression, all image file formats, colour depth, resolution, and image enhancement metalanguage.</p>
+  </div>
+
+  <div class="sec-label">Core concepts</div>
+  <div class="grid-2" style="margin-bottom:1rem;">
+    <div class="card">
+      <h3 style="color:var(--accent)">Vector Graphics</h3>
+      <div class="term"><span class="term-key tk-purple">Definition</span><span class="term-def">Images defined by mathematical equations (paths, anchor points, curves, fills) rather than pixels</span></div>
+      <div class="term"><span class="term-key tk-purple">Scalability</span><span class="term-def">Can be scaled to any size with <strong>no quality loss</strong> — equations are recalculated at each size</span></div>
+      <div class="term"><span class="term-key tk-purple">File size</span><span class="term-def">Remains small regardless of scale — only stores mathematical data, not pixel grids</span></div>
+      <div class="term"><span class="term-key tk-purple">Formats</span><span class="term-def">SVG, AI (Adobe Illustrator), EPS, PDF (can contain vectors)</span></div>
+      <div class="term"><span class="term-key tk-purple">Best for</span><span class="term-def">Logos, icons, illustrations, typography, print materials requiring multiple sizes</span></div>
+      <div class="term"><span class="term-key tk-purple">Software</span><span class="term-def">Adobe Illustrator, Inkscape, CorelDRAW, Affinity Designer</span></div>
+    </div>
+    <div class="card">
+      <h3 style="color:var(--accent3)">Bitmap / Raster Graphics</h3>
+      <div class="term"><span class="term-key tk-teal">Definition</span><span class="term-def">Images stored as a grid of individual pixels, each with its own colour value</span></div>
+      <div class="term"><span class="term-key tk-teal">Pixelation</span><span class="term-def">When enlarged, individual pixels become visible — image appears blocky or blurry</span></div>
+      <div class="term"><span class="term-key tk-teal">File size</span><span class="term-def">= Width × Height × Colour depth (in bits) ÷ 8 = bytes</span></div>
+      <div class="term"><span class="term-key tk-teal">Formats</span><span class="term-def">JPEG, PNG, GIF, TIFF, BMP, RAW</span></div>
+      <div class="term"><span class="term-key tk-teal">Best for</span><span class="term-def">Photographs, complex images with subtle colour gradients</span></div>
+      <div class="term"><span class="term-key tk-teal">Software</span><span class="term-def">Adobe Photoshop, GIMP, Affinity Photo, PaintShop Pro</span></div>
+    </div>
+  </div>
+
+  <div class="sec-label">Compression — expanded</div>
+  <div class="grid-2" style="margin-bottom:1rem;">
+    <div class="card" style="border-top:3px solid var(--accent3);">
+      <h3>🟢 Lossless Compression</h3>
+      <div class="term"><span class="term-key tk-teal">Definition</span><span class="term-def">Compression that preserves ALL original data — file can be perfectly reconstructed</span></div>
+      <div class="term"><span class="term-key tk-teal">How it works</span><span class="term-def">Identifies patterns and replaces with shorter codes (Run-Length Encoding: "AAAAAA" → "6A"). No data is thrown away.</span></div>
+      <div class="term"><span class="term-key tk-teal">File size reduction</span><span class="term-def">Moderate — typically 30–60% smaller than uncompressed</span></div>
+      <div class="term"><span class="term-key tk-teal">Quality</span><span class="term-def">Identical to original — zero quality loss at any number of saves</span></div>
+      <div class="term"><span class="term-key tk-teal">Image formats</span><span class="term-def">PNG, GIF, TIFF, BMP (optional)</span></div>
+      <div class="term"><span class="term-key tk-teal">Use when</span><span class="term-def">Logos, screenshots, text-heavy graphics, images that will be edited further, archiving masters</span></div>
+    </div>
+    <div class="card" style="border-top:3px solid var(--accent2);">
+      <h3>🔴 Lossy Compression</h3>
+      <div class="term"><span class="term-key tk-pink">Definition</span><span class="term-def">Compression that permanently discards data the human eye is least likely to notice</span></div>
+      <div class="term"><span class="term-key tk-pink">How JPEG works</span><span class="term-def">Divides image into 8×8 pixel blocks, applies Discrete Cosine Transform, discards high-frequency detail (fine texture). Quality setting (1–100) controls how much data is removed.</span></div>
+      <div class="term"><span class="term-key tk-pink">File size reduction</span><span class="term-def">Dramatic — can be 10× or more smaller than uncompressed</span></div>
+      <div class="term"><span class="term-key tk-pink">Quality</span><span class="term-def">Degrades with compression. <strong>Each resave as JPEG loses MORE data</strong> — called generation loss</span></div>
+      <div class="term"><span class="term-key tk-pink">Artefacts</span><span class="term-def">Blocky areas, colour banding, blur — visible at high compression settings</span></div>
+      <div class="term"><span class="term-key tk-pink">Use when</span><span class="term-def">Photographs for web/email where file size matters more than perfect quality</span></div>
+    </div>
+  </div>
+
+  <div class="sec-label">Image file formats</div>
+  <div class="table-wrap">
+    <table class="data-table">
+      <tr><th>Format</th><th>Type</th><th>Compression</th><th>Transparency</th><th>Colours</th><th>Best Use</th><th>Avoid When</th></tr>
+      <tr><td><strong>JPEG/JPG</strong></td><td>Bitmap</td><td>Lossy</td><td>❌ None</td><td>16.7 million</td><td>Photos, complex images for web/email</td><td>Text, logos, repeated saving</td></tr>
+      <tr><td><strong>PNG</strong></td><td>Bitmap</td><td>Lossless</td><td>✅ Alpha (semi-transparent)</td><td>16.7 million (PNG-24)</td><td>Web graphics, logos, screenshots with transparency</td><td>Large photos (large file size)</td></tr>
+      <tr><td><strong>GIF</strong></td><td>Bitmap</td><td>Lossless (LZW)</td><td>✅ Binary (on/off only)</td><td>256 maximum</td><td>Simple animations, small icons</td><td>Photos or gradients (banding)</td></tr>
+      <tr><td><strong>TIFF</strong></td><td>Bitmap</td><td>Lossless or none</td><td>✅ Yes</td><td>16.7 million+</td><td>Professional print, archiving originals</td><td>Web (huge file size)</td></tr>
+      <tr><td><strong>BMP</strong></td><td>Bitmap</td><td>None (uncompressed)</td><td>Limited</td><td>16.7 million</td><td>Windows system, short-term storage</td><td>Web — extremely large files</td></tr>
+      <tr><td><strong>SVG</strong></td><td>Vector</td><td>N/A</td><td>✅ Yes</td><td>Unlimited</td><td>Web icons, logos, scalable illustrations</td><td>Photos or complex raster images</td></tr>
+      <tr><td><strong>RAW</strong></td><td>Bitmap</td><td>None</td><td>N/A</td><td>Billions</td><td>Professional photography — maximum editing latitude</td><td>Web (huge, requires conversion)</td></tr>
+      <tr><td><strong>PDF</strong></td><td>Both</td><td>Variable</td><td>✅ Yes</td><td>16.7 million+</td><td>Documents, cross-platform sharing</td><td>When frequent editing is required</td></tr>
+    </table>
+  </div>
+
+  <div class="sec-label">Key metalanguage</div>
+  <div class="grid-2" style="margin-bottom:1rem;">
+    <div class="card">
+      <h3>Resolution &amp; Colour Depth</h3>
+      <div class="term"><span class="term-key tk-purple">Resolution</span><span class="term-def">Number of pixels per inch. Screen: 72–96 PPI. Print: 300+ DPI. Higher = sharper detail.</span></div>
+      <div class="term"><span class="term-key tk-purple">Colour depth</span><span class="term-def">Bits per pixel. 1-bit=2 colours | 8-bit=256 | 16-bit=65,536 | 24-bit=16.7M | 32-bit=24-bit + alpha</span></div>
+      <div class="term"><span class="term-key tk-purple">True Colour</span><span class="term-def">24-bit colour depth — 16.7 million colours, the maximum visible to the human eye</span></div>
+      <div class="formula">File size (bytes) = Width × Height × (Colour depth ÷ 8)</div>
+      <div class="info-box ib-amber"><strong>Worked example</strong><p>1920 × 1080 pixels @ 32-bit: 1920 × 1080 × 4 bytes = 8,294,400 bytes ≈ 7.9 MB uncompressed</p></div>
+    </div>
+    <div class="card">
+      <h3>Image Enhancement Terms</h3>
+      <div class="term"><span class="term-key tk-blue">Anti-aliasing</span><span class="term-def">Smoothing jagged pixel edges by blending transitional pixel colours at boundaries — makes curves and text appear smooth</span></div>
+      <div class="term"><span class="term-key tk-blue">Layers</span><span class="term-def">Independent stacked elements — each layer editable separately without affecting others. Non-destructive editing.</span></div>
+      <div class="term"><span class="term-key tk-blue">Filters</span><span class="term-def">Effects applied to alter appearance: blur, sharpen, emboss, noise, distort</span></div>
+      <div class="term"><span class="term-key tk-blue">Colour balance</span><span class="term-def">Adjusting ratio of RGB channels to correct or stylise the overall tone of an image</span></div>
+      <div class="term"><span class="term-key tk-blue">Brightness/Contrast</span><span class="term-def">Brightness = overall lightness. Contrast = difference between lightest and darkest areas.</span></div>
+      <div class="term"><span class="term-key tk-blue">Stroke &amp; Fill</span><span class="term-def">Stroke = outline/border of a shape. Fill = interior colour or pattern of a shape.</span></div>
+    </div>
+  </div>
+
+  <div class="sec-label">Practice questions</div>
+  <div class="info-box ib-purple" style="margin-bottom:1.5rem;"><strong>How to use</strong><p>Try answering each question before clicking "Show model answer". Note the mark value — each mark requires one distinct, specific point. Short answers need 1–2 sentences per mark. Extended responses need PEEL structure.</p></div>
+
+  <div class="q-block">
+    <div class="q-header"><span class="q-type-badge qb-short">Short Answer</span><span class="q-marks">1 mark</span></div>
+    <div class="q-text">Identify ONE file format that would be appropriate for saving a company logo that requires a transparent background for use on a website.</div>
+    <button class="q-expand-btn"><span class="arrow">▶</span> Show model answer</button>
+    <div class="q-answer">
+      <p><strong>Answer:</strong> PNG (Portable Network Graphics)</p>
+      <p style="font-size:0.85rem;color:var(--muted);margin-top:0.5rem;">PNG supports alpha channel transparency, allowing the background to be fully or partially transparent, which is essential for logos placed over coloured or patterned website backgrounds. SVG would also be accepted.</p>
+      <div class="info-box ib-teal" style="margin-top:0.75rem;"><strong>Why this gets the mark</strong><p>Names a specific, correct format AND explains why it is appropriate (transparency support for web use).</p></div>
+    </div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-header"><span class="q-type-badge qb-short">Short Answer</span><span class="q-marks">3 marks</span></div>
+    <div class="q-text">Describe the differences between vector and bitmapped images, with reference to how each handles scaling.</div>
+    <button class="q-expand-btn"><span class="arrow">▶</span> Show model answer</button>
+    <div class="q-answer">
+      <div class="model-label ml-peel">PEEL Format</div>
+      <div class="peel-block">
+        <div class="peel-row p-p"><div class="peel-letter">P</div><div class="peel-content">Bitmapped images are made up of a fixed grid of pixels, while vector images are defined by mathematical equations (paths, anchor points and curves). <span class="mark-chip">1 mark</span><em>Point: defines both types accurately</em></div></div>
+        <div class="peel-row p-e1"><div class="peel-letter">E</div><div class="peel-content">When a bitmapped image is enlarged, the fixed pixel grid is stretched — individual pixels become visible and the image appears pixelated or blurry. In contrast, vector images are recalculated mathematically at every new size, so they remain perfectly sharp and smooth at any scale. <span class="mark-chip mk-2">1 mark</span><em>Evidence: explains the scaling behaviour of both types</em></div></div>
+        <div class="peel-row p-l"><div class="peel-letter">L</div><div class="peel-content">This is why vector formats such as SVG or AI are preferred for logos and graphics that must appear at multiple sizes, whereas bitmap formats like JPEG and PNG are suited to photographs where subtle colour gradients are more important than scalability. <span class="mark-chip mk-3">1 mark</span><em>Link: applies distinction to practical context</em></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-header"><span class="q-type-badge qb-short">Short Answer</span><span class="q-marks">3 marks</span></div>
+    <div class="q-text">Calculate the uncompressed file size in MB of an image that is 1920 × 1080 pixels with a colour depth of 32 bits. Show all working.</div>
+    <button class="q-expand-btn"><span class="arrow">▶</span> Show model answer</button>
+    <div class="q-answer">
+      <div class="formula">Step 1: Total pixels = 1920 × 1080 = 2,073,600 pixels</div>
+      <div class="formula">Step 2: Bits = 2,073,600 × 32 = 66,355,200 bits</div>
+      <div class="formula">Step 3: Bytes = 66,355,200 ÷ 8 = 8,294,400 bytes</div>
+      <div class="formula">Step 4: MB = 8,294,400 ÷ (1024 × 1024) = 7.91 MB</div>
+      <div class="info-box ib-teal" style="margin-top:0.75rem;"><strong>Mark breakdown</strong><p>Mark 1: correct pixel multiplication. Mark 2: correct application of bit depth and conversion to bytes. Mark 3: correct final MB answer with working shown.</p></div>
+    </div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-header"><span class="q-type-badge qb-ext">Extended Response</span><span class="q-marks">4 marks</span></div>
+    <div class="q-text">Compare lossless and lossy compression methods, explaining how each affects image quality and data storage requirements.</div>
+    <button class="q-expand-btn"><span class="arrow">▶</span> Show model answer</button>
+    <div class="q-answer">
+      <div class="model-label ml-peel">PEEL Format</div>
+      <div class="peel-block">
+        <div class="peel-row p-p"><div class="peel-letter">P</div><div class="peel-content">Lossless compression retains all original image data, while lossy compression permanently removes data that the human eye is least likely to notice — typically fine texture and high-frequency detail. <span class="mark-chip">1 mark</span></div></div>
+        <div class="peel-row p-e1"><div class="peel-letter">E</div><div class="peel-content">In lossless compression (used in PNG and GIF), repeated patterns are replaced with shorter codes. This means the image can be perfectly reconstructed — quality is identical to the original at any number of saves. However, the reduction in file size is moderate, typically 30–60%. <span class="mark-chip mk-2">1 mark</span></div></div>
+        <div class="peel-row p-e2"><div class="peel-letter">E</div><div class="peel-content">Lossy compression (used in JPEG) achieves far greater file size reductions — sometimes 90% or more — by permanently discarding pixel data. This causes visible artefacts such as blockiness at high compression, and quality degrades further each time the file is saved. <span class="mark-chip mk-2">1 mark</span></div></div>
+        <div class="peel-row p-l"><div class="peel-letter">L</div><div class="peel-content">The choice therefore depends on the intended use: lossless is preferred for logos, screenshots and any image requiring further editing, while lossy is appropriate for photographs distributed online where minimising file size is more important than perfect quality. <span class="mark-chip mk-3">1 mark</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-header"><span class="q-type-badge qb-ext">Extended Response</span><span class="q-marks">5 marks</span></div>
+    <div class="q-text">Describe the ethical implications of image manipulation and enhancement in the multimedia industry, using examples.</div>
+    <button class="q-expand-btn"><span class="arrow">▶</span> Show model answer</button>
+    <div class="q-answer">
+      <div class="model-label ml-steel">STEEL Format</div>
+      <div class="peel-block">
+        <div class="peel-row p-s"><div class="peel-letter">S</div><div class="peel-content">Image manipulation and enhancement in the multimedia industry raises significant ethical concerns relating to authenticity, misinformation, and harm to individuals. <span class="mark-chip">1 mark</span></div></div>
+        <div class="peel-row p-t"><div class="peel-letter">T</div><div class="peel-content">Over-editing photographs in advertising — for example, digitally slimming models or removing blemishes to create an unrealistic ideal — can have harmful psychological impacts on audiences, particularly young people, by establishing unattainable beauty standards. <span class="mark-chip mk-2">1 mark</span></div></div>
+        <div class="peel-row p-e1"><div class="peel-letter">E</div><div class="peel-content">In journalism, altered images can mislead the public and distort facts. For instance, a news photograph digitally altered to change a crowd size or show a politician in a false context constitutes misinformation and erodes public trust in media. <span class="mark-chip mk-2">1 mark</span></div></div>
+        <div class="peel-row p-e2"><div class="peel-letter">E</div><div class="peel-content">Conversely, image manipulation can also serve ethical purposes — pixelating or blurring the faces of victims in news footage protects the privacy and dignity of individuals in traumatic situations. <span class="mark-chip mk-3">1 mark</span></div></div>
+        <div class="peel-row p-l"><div class="peel-letter">L</div><div class="peel-content">Copyright and ownership issues also arise when images are modified without proper attribution or consent, violating the intellectual property rights of the original creator. Ethical practice in multimedia therefore requires transparency, consent, and a careful balance between creative expression and honest representation of reality. <span class="mark-chip mk-top">1 mark</span></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer><p>HSC Multimedia Technologies Study Hub &nbsp;·&nbsp; Graphics, Files &amp; Compression &nbsp;·&nbsp; For educational use only</p></footer>
+<script src="nav.js" defer></script>
+</body></html>
+HTMLEOF
+echo "graphics done"
+Output
+
+graphics done
