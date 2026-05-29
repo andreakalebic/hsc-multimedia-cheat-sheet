@@ -1,0 +1,145 @@
+bash
+
+cat > /mnt/user-data/outputs/multimedia-hsc/video.html << 'HTMLEOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video — HSC Multimedia</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">📱 HSC Multimedia</a>
+  <div class="nav-links">
+    <a href="index.html">🏠 Home</a><a href="graphics.html">🖼 Graphics</a><a href="audio.html">🔊 Audio</a><a href="video.html">🎬 Video</a><a href="animation.html">✨ Animation &amp; VR</a><a href="www.html">🌐 WWW</a><a href="industry.html">🏢 Industry Study</a><a href="ethics.html">⚖️ IP &amp; Ethics</a><a href="sectors.html" class="never">★ Sectors</a><a href="careers.html" class="never">★ Careers</a>
+  </div>
+</nav>
+<div class="page-wrap">
+  <a href="index.html" class="back-link">← Back to Home</a>
+  <div class="page-hero">
+    <div class="page-hero-tag tag-hot">🎬 Frequent — compression &amp; editing both tested</div>
+    <h1>Video — Compression, Types &amp; Editing</h1>
+    <p>Lossless vs lossy video codecs, I-frames and P-frames, all video file formats, camera shots, special effects, and editing metalanguage.</p>
+  </div>
+
+  <div class="sec-label">Video compression — expanded</div>
+  <div class="grid-2" style="margin-bottom:1rem;">
+    <div class="card" style="border-top:3px solid var(--accent3);">
+      <h3>🟢 Lossless Video Compression</h3>
+      <div class="term"><span class="term-key tk-teal">Definition</span><span class="term-def">Every frame can be perfectly reconstructed — no data is discarded. Used in professional production.</span></div>
+      <div class="term"><span class="term-key tk-teal">Intraframe</span><span class="term-def">Each frame is compressed independently (like a still JPEG within the video). Can seek to any frame instantly — preferred for editing.</span></div>
+      <div class="term"><span class="term-key tk-teal">Formats</span><span class="term-def">Apple ProRes, Avid DNxHD, Cinema DNG RAW, HuffYUV, Cineform</span></div>
+      <div class="term"><span class="term-key tk-teal">Effect on quality</span><span class="term-def">Zero degradation — used for editing masters, archiving, and colour grading where maximum quality is essential</span></div>
+      <div class="term"><span class="term-key tk-teal">Effect on storage</span><span class="term-def">Very large files — ProRes 4K can require 1TB+ per hour. Requires fast, high-capacity drives.</span></div>
+    </div>
+    <div class="card" style="border-top:3px solid var(--accent2);">
+      <h3>🔴 Lossy Video Compression</h3>
+      <div class="term"><span class="term-key tk-pink">Definition</span><span class="term-def">Permanently removes video data deemed invisible to the human eye. Used for distribution and streaming.</span></div>
+      <div class="term"><span class="term-key tk-pink">Interframe</span><span class="term-def">Only stores the CHANGES between frames rather than complete frames. Dramatic file size reduction.</span></div>
+      <div class="term"><span class="term-key tk-pink">I-frame (keyframe)</span><span class="term-def">A complete, independently-encoded frame — like a full JPEG stored within the video stream. Appears regularly throughout.</span></div>
+      <div class="term"><span class="term-key tk-pink">P-frame (predicted)</span><span class="term-def">Only stores the differences (motion vectors and changed pixels) from the previous I or P frame.</span></div>
+      <div class="term"><span class="term-key tk-pink">B-frame (bidirectional)</span><span class="term-def">References both previous AND future frames — highest compression but cannot be decoded independently.</span></div>
+      <div class="term"><span class="term-key tk-pink">Formats</span><span class="term-def">H.264/AVC (MP4), H.265/HEVC, VP9, AV1 — dominant distribution formats</span></div>
+      <div class="term"><span class="term-key tk-pink">Artefacts</span><span class="term-def">Macroblocking (blocky areas), motion blur smearing, colour banding — visible at high compression settings</span></div>
+    </div>
+  </div>
+
+  <div class="sec-label">Video file formats</div>
+  <div class="table-wrap">
+    <table class="data-table">
+      <tr><th>Format</th><th>Container</th><th>Codec (typical)</th><th>Quality</th><th>Best Use</th></tr>
+      <tr><td><strong>MP4 (.mp4)</strong></td><td>MPEG-4</td><td>H.264 — Lossy</td><td>⭐⭐⭐⭐ Excellent</td><td>Web, streaming, smartphones — current industry standard for distribution</td></tr>
+      <tr><td><strong>MOV (.mov)</strong></td><td>Apple QuickTime</td><td>ProRes (lossless) or H.264</td><td>⭐⭐⭐⭐⭐ High</td><td>Mac-based professional editing and production</td></tr>
+      <tr><td><strong>AVI (.avi)</strong></td><td>Audio Video Interleave</td><td>Variable</td><td>⭐⭐⭐ Good</td><td>Windows-based editing, legacy projects</td></tr>
+      <tr><td><strong>WMV (.wmv)</strong></td><td>Windows Media Video</td><td>WMV codec — Lossy</td><td>⭐⭐⭐ Good</td><td>Windows Media Player, smaller web files</td></tr>
+      <tr><td><strong>MPEG (.mpg)</strong></td><td>MPEG-1/MPEG-2</td><td>MPEG-2 — Lossy</td><td>⭐⭐⭐ Good</td><td>DVDs, broadcast television</td></tr>
+      <tr><td><strong>MKV (.mkv)</strong></td><td>Matroska</td><td>Multiple supported</td><td>⭐⭐⭐⭐⭐ High</td><td>HD content with multiple audio tracks and subtitles</td></tr>
+      <tr><td><strong>FLV (.flv)</strong></td><td>Flash Video</td><td>H.263 — Lossy</td><td>⭐⭐ Legacy</td><td>Old web video (pre-2010 YouTube) — largely obsolete</td></tr>
+      <tr><td><strong>WebM (.webm)</strong></td><td>Open web format</td><td>VP9 — Lossy</td><td>⭐⭐⭐⭐ Very good</td><td>Modern web video — open source, royalty-free</td></tr>
+    </table>
+  </div>
+
+  <div class="sec-label">Video editing metalanguage</div>
+  <div class="grid-3" style="margin-bottom:1rem;">
+    <div class="card">
+      <h3>Camera Shots</h3>
+      <div class="term"><span class="term-key tk-purple">ECU</span><span class="term-def">Extreme Close-Up — intense detail, emotion (eye, mouth)</span></div>
+      <div class="term"><span class="term-key tk-purple">CU</span><span class="term-def">Close-Up — full face, expression and emotion</span></div>
+      <div class="term"><span class="term-key tk-purple">MS</span><span class="term-def">Mid-Shot — waist up, used in conversation scenes</span></div>
+      <div class="term"><span class="term-key tk-purple">LS/WS</span><span class="term-def">Long/Wide Shot — establishes setting and location</span></div>
+      <div class="term"><span class="term-key tk-purple">Low angle</span><span class="term-def">Camera looks up at subject — implies power, dominance, authority</span></div>
+      <div class="term"><span class="term-key tk-purple">High angle</span><span class="term-def">Camera looks down — implies vulnerability, weakness, smallness</span></div>
+      <div class="term"><span class="term-key tk-purple">Tracking</span><span class="term-def">Camera moves alongside the subject — creates immersion and movement</span></div>
+    </div>
+    <div class="card">
+      <h3>Editing Techniques</h3>
+      <div class="term"><span class="term-key tk-blue">Cut</span><span class="term-def">Instant switch from one shot to the next — most common transition</span></div>
+      <div class="term"><span class="term-key tk-blue">Dissolve</span><span class="term-def">One clip fades out while the next fades in simultaneously — implies passage of time</span></div>
+      <div class="term"><span class="term-key tk-blue">Fade to black</span><span class="term-def">Scene gradually darkens to black — marks end of sequence or scene</span></div>
+      <div class="term"><span class="term-key tk-blue">Wipe</span><span class="term-def">New scene replaces old scene by sliding across the frame in a defined direction</span></div>
+      <div class="term"><span class="term-key tk-blue">Timeline</span><span class="term-def">Visual display in editing software where clips, audio, titles and effects are arranged chronologically</span></div>
+      <div class="term"><span class="term-key tk-blue">Synchronising</span><span class="term-def">Matching audio (dialogue, music) precisely to corresponding video frames — essential for lip sync</span></div>
+    </div>
+    <div class="card">
+      <h3>Special Effects &amp; Other Terms</h3>
+      <div class="term"><span class="term-key tk-teal">Chroma key</span><span class="term-def">Replacing a solid colour (usually green) background with another image or video — "green screen"</span></div>
+      <div class="term"><span class="term-key tk-teal">CGI</span><span class="term-def">Computer-Generated Imagery — 3D digital elements composited into live footage</span></div>
+      <div class="term"><span class="term-key tk-teal">Slow motion</span><span class="term-def">Record at high frame rate (e.g. 120fps) and play back at standard rate (24fps) — action appears slowed</span></div>
+      <div class="term"><span class="term-key tk-teal">Time lapse</span><span class="term-def">Record at very low rate (1 frame per second/minute) and play at standard rate — slow processes appear fast</span></div>
+      <div class="term"><span class="term-key tk-teal">Morphing</span><span class="term-def">Smooth transformation from one image/shape to another over a sequence of frames — used for effects</span></div>
+      <div class="term"><span class="term-key tk-teal">Storyboard</span><span class="term-def">Sequential drawn sketches representing planned camera shots and transitions before filming</span></div>
+    </div>
+  </div>
+
+  <div class="sec-label">Practice questions</div>
+  <div class="q-block">
+    <div class="q-header"><span class="q-type-badge qb-short">Short Answer</span><span class="q-marks">2 marks</span></div>
+    <div class="q-text">Describe how analogue and digital video types differ from each other.</div>
+    <button class="q-expand-btn"><span class="arrow">▶</span> Show model answer</button>
+    <div class="q-answer">
+      <p><strong>Analogue video</strong> stores footage as a continuous electrical signal on magnetic tape (e.g. VHS). It degrades in quality with each copy made ("generation loss") and cannot be easily edited or transmitted without quality loss. <span class="mark-chip">1 mark</span></p>
+      <p style="margin-top:0.5rem;"><strong>Digital video</strong> stores footage as binary data, which can be copied, transmitted, and edited without any degradation in quality. It can be compressed, streamed over the internet, and stored on any digital medium. <span class="mark-chip mk-2">1 mark</span></p>
+    </div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-header"><span class="q-type-badge qb-ext">Extended Response</span><span class="q-marks">4 marks</span></div>
+    <div class="q-text">Explain how video compression affects image quality and data storage, using examples of compression types.</div>
+    <button class="q-expand-btn"><span class="arrow">▶</span> Show model answer</button>
+    <div class="q-answer">
+      <div class="model-label ml-peel">PEEL Format</div>
+      <div class="peel-block">
+        <div class="peel-row p-p"><div class="peel-letter">P</div><div class="peel-content">Video compression reduces file size by encoding video data more efficiently, but the method used determines whether quality is preserved or sacrificed. <span class="mark-chip">1 mark</span></div></div>
+        <div class="peel-row p-e1"><div class="peel-letter">E</div><div class="peel-content">Lossless codecs such as Apple ProRes store every frame in full — quality is identical to the original raw footage and files can be edited non-destructively. However, uncompressed 4K ProRes footage can require over 1 terabyte of storage per hour, necessitating large, fast hard drives. <span class="mark-chip mk-2">1 mark</span></div></div>
+        <div class="peel-row p-e2"><div class="peel-letter">E</div><div class="peel-content">Lossy codecs such as H.264 (used in MP4) use interframe compression — storing only keyframes (I-frames with complete image data) and recording only the changes between subsequent frames (P-frames). This can reduce file sizes by 90% or more compared to lossless, but introduces artefacts such as macroblocking and colour banding, particularly in fast-moving scenes. <span class="mark-chip mk-2">1 mark</span></div></div>
+        <div class="peel-row p-l"><div class="peel-letter">L</div><div class="peel-content">The practical implication is that lossless compression is used during production and editing where quality is critical, while lossy formats like MP4 (H.264) are used for final distribution — streaming, web publishing and consumer playback — where smaller file sizes are essential. <span class="mark-chip mk-3">1 mark</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-header"><span class="q-type-badge qb-ext">Extended Response</span><span class="q-marks">5 marks</span></div>
+    <div class="q-text">Demonstrate a thorough understanding of the process of using special effects in a multimedia production, using examples.</div>
+    <button class="q-expand-btn"><span class="arrow">▶</span> Show model answer</button>
+    <div class="q-answer">
+      <div class="model-label ml-steel">STEEL Format</div>
+      <div class="peel-block">
+        <div class="peel-row p-s"><div class="peel-letter">S</div><div class="peel-content">Special effects in multimedia productions are used to create visual elements that are impossible, impractical, or too dangerous to film in reality, requiring careful planning and integration during both production and post-production. <span class="mark-chip">1 mark</span></div></div>
+        <div class="peel-row p-t"><div class="peel-letter">T</div><div class="peel-content">The process begins with a detailed storyboard outlining every shot requiring effects. Technical requirements are assessed — including the software (e.g. Adobe After Effects, Nuke), hardware processing power, and the skill sets of the VFX team — before any footage is captured. <span class="mark-chip mk-2">1 mark</span></div></div>
+        <div class="peel-row p-e1"><div class="peel-letter">E</div><div class="peel-content">For live-action effects involving backgrounds, a green screen (chroma key) is set up on set. Actors perform in front of the green screen while the background is digitally replaced in post-production. Consistent lighting on the set is critical to ensure the keyed footage integrates seamlessly with the digital background. <span class="mark-chip mk-2">1 mark</span></div></div>
+        <div class="peel-row p-e2"><div class="peel-letter">E</div><div class="peel-content">For purely digital effects, 3D assets — models, textures, and particle systems — are developed and rendered. In the Marvel Cinematic Universe, CGI is used extensively to create characters such as Thanos and to generate large-scale battle environments that would be impossible to physically construct. Motion tracking data from cameras ensures digital elements move in sync with the live footage. <span class="mark-chip mk-3">1 mark</span></div></div>
+        <div class="peel-row p-l"><div class="peel-letter">L</div><div class="peel-content">The final step is compositing — integrating all elements (live footage, 3D renders, particle effects, and colour grading) into a seamless whole. The effectiveness of special effects depends on their invisibility — the audience should be convinced of the reality of what they see, which requires meticulous attention to lighting, shadow, motion blur, and colour matching throughout the pipeline. <span class="mark-chip mk-top">1 mark</span></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer><p>HSC Multimedia Technologies Study Hub &nbsp;·&nbsp; Video &nbsp;·&nbsp; For educational use only</p></footer>
+<script src="nav.js" defer></script>
+</body></html>
+HTMLEOF
+echo "video done"
+Output
+
+video done
