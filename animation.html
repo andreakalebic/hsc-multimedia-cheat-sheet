@@ -1,0 +1,196 @@
+bash
+
+cat > /mnt/user-data/outputs/multimedia-hsc/animation.html << 'HTMLEOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animation &amp; Virtual Reality — HSC Multimedia</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+.spectrum { display:flex; gap:0; margin:1rem 0; border-radius:var(--r); overflow:hidden; border:1px solid var(--border); }
+.spec-item { flex:1; padding:1rem; text-align:center; }
+.spec-item h4 { font-family:var(--font-head); font-size:0.9rem; font-weight:700; margin-bottom:0.3rem; }
+.spec-item p { font-size:0.75rem; color:var(--muted); }
+.s-real { background:#f5f5f5; border-right:1px solid var(--border); }
+.s-ar { background:var(--accent4-light); border-right:1px solid var(--border); }
+.s-mr { background:var(--accent3-light); border-right:1px solid var(--border); }
+.s-vr { background:var(--accent-light); }
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">📱 HSC Multimedia</a>
+  <div class="nav-links">
+    <a href="index.html">🏠 Home</a><a href="graphics.html">🖼 Graphics</a><a href="audio.html">🔊 Audio</a><a href="video.html">🎬 Video</a><a href="animation.html">✨ Animation &amp; VR</a><a href="www.html">🌐 WWW</a><a href="industry.html">🏢 Industry Study</a><a href="ethics.html">⚖️ IP &amp; Ethics</a><a href="sectors.html" class="never">★ Sectors</a><a href="careers.html" class="never">★ Careers</a>
+  </div>
+</nav>
+<div class="page-wrap">
+  <a href="index.html" class="back-link">← Back to Home</a>
+  <div class="page-hero">
+    <div class="page-hero-tag tag-core">✨ Frequent — students requested VR deep dive</div>
+    <h1>Animation &amp; Virtual Reality</h1>
+    <p>2D and 3D animation techniques, motion capture, tweening, morphing — plus a full Virtual Reality deep dive covering VR/AR/MR, hardware, applications and ethics.</p>
+  </div>
+
+  <div class="sec-label">2D animation techniques</div>
+  <div class="grid-3" style="margin-bottom:1rem;">
+    <div class="card">
+      <h3>Traditional &amp; Stop Motion</h3>
+      <div class="term"><span class="term-key tk-purple">Cel animation</span><span class="term-def">Individual drawings on transparent acetate sheets (cels) photographed sequentially — traditional Disney method</span></div>
+      <div class="term"><span class="term-key tk-purple">Stop motion</span><span class="term-def">Physical objects photographed frame-by-frame — each photograph represents one frame of movement</span></div>
+      <div class="term"><span class="term-key tk-purple">Claymation</span><span class="term-def">Stop motion using clay or plasticine models that are reshaped between each frame — e.g. Wallace &amp; Gromit</span></div>
+      <div class="term"><span class="term-key tk-purple">Cutout animation</span><span class="term-def">Flat characters or objects moved between frames — South Park began using this technique digitally</span></div>
+    </div>
+    <div class="card">
+      <h3>Keyframing &amp; Tweening</h3>
+      <div class="term"><span class="term-key tk-blue">Keyframe</span><span class="term-def">A specific frame where an object's state (position, size, colour, shape) is explicitly defined by the animator</span></div>
+      <div class="term"><span class="term-key tk-blue">Tweening</span><span class="term-def">Software automatically generates all frames BETWEEN two keyframes — "in-betweening". Saves huge amounts of animation work.</span></div>
+      <div class="term"><span class="term-key tk-blue">Motion tween</span><span class="term-def">Object moves from one position to another across frames — position interpolated automatically</span></div>
+      <div class="term"><span class="term-key tk-blue">Shape tween</span><span class="term-def">Object morphs from one shape to another across frames — both shape and colour interpolated</span></div>
+      <div class="term"><span class="term-key tk-blue">Frame rate</span><span class="term-def">Speed of animation. 12fps = classic cartoon feel | 24fps = cinema standard | 60fps = smooth game animation</span></div>
+    </div>
+    <div class="card">
+      <h3>Path &amp; Behaviour</h3>
+      <div class="term"><span class="term-key tk-teal">Path animation</span><span class="term-def">Object automatically follows a defined curved or straight path between a start and end point</span></div>
+      <div class="term"><span class="term-key tk-teal">Behaviour animation</span><span class="term-def">Objects respond to programmed rules (gravity, collision detection, wind) rather than frame-by-frame instruction</span></div>
+      <div class="term"><span class="term-key tk-teal">Looping</span><span class="term-def">Animation plays continuously — last frame connects seamlessly to first frame</span></div>
+      <div class="term"><span class="term-key tk-teal">Morphing</span><span class="term-def">Gradual, smooth transformation from one image to another — used in special effects and transitions</span></div>
+      <div class="term"><span class="term-key tk-teal">Onion skinning</span><span class="term-def">Displaying transparent versions of previous frames to help animators position the next frame accurately</span></div>
+    </div>
+  </div>
+
+  <div class="sec-label">3D animation process</div>
+  <div class="grid-2" style="margin-bottom:1rem;">
+    <div class="card">
+      <h3>3D Production Pipeline</h3>
+      <div class="term"><span class="term-key tk-amber">Modelling</span><span class="term-def">Building the 3D shape of objects using polygons (flat faces joined at edges and vertices), NURBS curves, or digital sculpting</span></div>
+      <div class="term"><span class="term-key tk-amber">Wireframe</span><span class="term-def">Skeletal 3D representation showing only edges and vertices — used during modelling to see object structure</span></div>
+      <div class="term"><span class="term-key tk-amber">Texturing</span><span class="term-def">Applying surface material images (texture maps) to 3D models — gives appearance of wood, skin, fabric, metal etc.</span></div>
+      <div class="term"><span class="term-key tk-amber">UV mapping</span><span class="term-def">Unfolding a 3D surface into a flat 2D map so textures can be applied accurately to the model's surface</span></div>
+      <div class="term"><span class="term-key tk-amber">Rigging</span><span class="term-def">Creating a digital skeleton (armature) inside a 3D model so it can be posed and animated naturally</span></div>
+      <div class="term"><span class="term-key tk-amber">Rendering</span><span class="term-def">Processing all 3D scene data (geometry, lighting, textures, shadows, reflections) to produce final 2D images. Very computationally intensive — can take hours per frame.</span></div>
+      <div class="term"><span class="term-key tk-amber">Ray tracing</span><span class="term-def">Rendering technique simulating how light physically bounces — produces photorealistic shadows and reflections</span></div>
+    </div>
+    <div class="card">
+      <h3>Motion Capture (MoCap)</h3>
+      <div class="term"><span class="term-key tk-pink">Definition</span><span class="term-def">Recording real human (or animal) movement and applying that data to a 3D digital character</span></div>
+      <div class="term"><span class="term-key tk-pink">Optical system</span><span class="term-def">Reflective markers placed on actor's joints, tracked by multiple infrared cameras — most common professional method</span></div>
+      <div class="term"><span class="term-key tk-pink">Inertial system</span><span class="term-def">Small sensor units (IMUs) worn on the body detecting movement via accelerometers and gyroscopes — no camera required</span></div>
+      <div class="term"><span class="term-key tk-pink">Facial capture</span><span class="term-def">Tracking subtle facial muscle movements for realistic digital character expressions</span></div>
+      <div class="term"><span class="term-key tk-pink">Advantages</span><span class="term-def">Realistic, natural movement; faster than hand-keyframing; captures subtle expressions; data is reusable across multiple characters; reduces labour costs</span></div>
+      <div class="term"><span class="term-key tk-pink">Disadvantages</span><span class="term-def">Expensive equipment and large capture volume required; cannot capture hair, cloth or fluid physics; requires cleanup in post; limited by actor's physical range</span></div>
+    </div>
+  </div>
+
+  <div class="sec-label">Virtual reality — deep dive</div>
+  <div class="spectrum">
+    <div class="spec-item s-real"><h4>Real World</h4><p>Physical reality — no digital overlay</p></div>
+    <div class="spec-item s-ar"><h4>Augmented Reality (AR)</h4><p>Digital elements overlaid onto real world — e.g. Pokémon GO, IKEA app</p></div>
+    <div class="spec-item s-mr"><h4>Mixed Reality (MR)</h4><p>Digital and physical objects interact — e.g. Microsoft HoloLens</p></div>
+    <div class="spec-item s-vr"><h4>Virtual Reality (VR)</h4><p>Completely digital immersive environment — real world not visible</p></div>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:1rem;">
+    <div class="card">
+      <h3>VR — Core Characteristics</h3>
+      <div class="term"><span class="term-key tk-purple">Immersion</span><span class="term-def">Complete replacement of the real visual environment with a 3D digital world — user cannot see the real world</span></div>
+      <div class="term"><span class="term-key tk-purple">Interactivity</span><span class="term-def">User actions (head movement, controller input) change the virtual environment in real time — the defining feature that separates VR from passive 3D video</span></div>
+      <div class="term"><span class="term-key tk-purple">Believability</span><span class="term-def">The degree to which the experience feels real and convincing — affected by visual resolution, frame rate, latency, and audio accuracy</span></div>
+      <div class="term"><span class="term-key tk-purple">Real-time rendering</span><span class="term-def">The environment must update and respond to user input with minimal latency (ideally under 20 milliseconds) — high latency causes motion sickness (cybersickness)</span></div>
+      <div class="term"><span class="term-key tk-purple">3D soundscape</span><span class="term-def">Spatial audio that changes based on the user's head position and orientation — contributes greatly to the sense of presence in the virtual world</span></div>
+      <div class="term"><span class="term-key tk-purple">Haptic feedback</span><span class="term-def">Controllers or vests that vibrate or apply pressure — simulates the sensation of touching objects in the virtual world</span></div>
+    </div>
+    <div class="card">
+      <h3>VR Hardware &amp; Software</h3>
+      <div class="term"><span class="term-key tk-blue">HMD</span><span class="term-def">Head Mounted Display — a headset with one screen per eye creating stereoscopic 3D vision. Examples: Meta Quest, PlayStation VR, HTC Vive</span></div>
+      <div class="term"><span class="term-key tk-blue">6DoF</span><span class="term-def">Six Degrees of Freedom — tracks head movement in three axes (X/Y/Z for position) AND three rotations (pitch/yaw/roll). Essential for full immersion.</span></div>
+      <div class="term"><span class="term-key tk-blue">Field of View (FoV)</span><span class="term-def">The angle of vision provided by the headset. Human vision ≈ 220°. Consumer VR ≈ 90–120°. Wider FoV = more immersive.</span></div>
+      <div class="term"><span class="term-key tk-blue">Refresh rate</span><span class="term-def">How many times per second the headset display updates. Minimum 72Hz recommended; 90Hz+ preferred to prevent motion sickness</span></div>
+      <div class="term"><span class="term-key tk-blue">Game engine</span><span class="term-def">Software used to create interactive VR experiences — Unity and Unreal Engine render 3D scenes in real time and handle physics and input</span></div>
+      <div class="term"><span class="term-key tk-blue">Walkthroughs</span><span class="term-def">Pre-rendered or real-time 3D tours of environments — used in architecture, real estate, and education</span></div>
+      <div class="term"><span class="term-key tk-blue">Navigable scenes</span><span class="term-def">Environments where the user can freely move through and explore the 3D space using controllers or physical movement</span></div>
+    </div>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:1.5rem;">
+    <div class="card">
+      <h3>VR Applications</h3>
+      <ul style="font-size:0.875rem;color:var(--muted);line-height:1.8;padding-left:1.1rem;">
+        <li><strong style="color:var(--text)">Training simulators:</strong> Flight, surgery, military, firefighting — risks without real-world consequences</li>
+        <li><strong style="color:var(--text)">Architecture &amp; design:</strong> Virtual walkthroughs of buildings before construction</li>
+        <li><strong style="color:var(--text)">Education:</strong> Virtual field trips, historical reconstructions, anatomy exploration</li>
+        <li><strong style="color:var(--text)">Healthcare:</strong> Phobia treatment (exposure therapy), pain management, rehabilitation</li>
+        <li><strong style="color:var(--text)">Entertainment:</strong> Immersive gaming, virtual concerts, theme parks</li>
+        <li><strong style="color:var(--text)">Product design:</strong> Virtual prototyping before physical manufacture</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>VR Advantages &amp; Disadvantages</h3>
+      <p style="font-size:0.78rem;font-weight:700;color:var(--accent3);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.4rem;">Advantages</p>
+      <ul style="font-size:0.855rem;color:var(--muted);line-height:1.7;padding-left:1.1rem;margin-bottom:0.75rem;">
+        <li>Safe simulation of dangerous real-world scenarios</li>
+        <li>Repeatable without consequences or cost of real mistakes</li>
+        <li>Highly engaging and immersive learning environment</li>
+        <li>Can simulate physically impossible scenarios</li>
+        <li>Accessible to users who cannot travel to real locations</li>
+      </ul>
+      <p style="font-size:0.78rem;font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.4rem;">Disadvantages</p>
+      <ul style="font-size:0.855rem;color:var(--muted);line-height:1.7;padding-left:1.1rem;">
+        <li>Very high development and hardware costs</li>
+        <li>Motion sickness (cybersickness) from latency and visual-vestibular conflict</li>
+        <li>Social isolation — primarily a single-user experience</li>
+        <li>Cannot fully replicate tactile, smell, or temperature sensations</li>
+        <li>Requires regular content updates to remain useful</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sec-label">Practice questions</div>
+  <div class="q-block">
+    <div class="q-header"><span class="q-type-badge qb-short">Short Answer</span><span class="q-marks">1 mark</span></div>
+    <div class="q-text">Identify ONE software application used for creating vector graphics.</div>
+    <button class="q-expand-btn"><span class="arrow">▶</span> Show model answer</button>
+    <div class="q-answer"><p>Adobe Illustrator (or: Inkscape, CorelDRAW, Affinity Designer, SVGEdit)</p><div class="info-box ib-teal" style="margin-top:0.75rem;"><strong>Mark note</strong><p>Any recognised vector authoring software is accepted. Must be a specific named application — "drawing software" alone is not sufficient.</p></div></div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-header"><span class="q-type-badge qb-ext">Extended Response</span><span class="q-marks">4 marks</span></div>
+    <div class="q-text">Explain the potential advantages of using motion capture technology in the production of a short animated film.</div>
+    <button class="q-expand-btn"><span class="arrow">▶</span> Show model answer</button>
+    <div class="q-answer">
+      <div class="model-label ml-peel">PEEL Format</div>
+      <div class="peel-block">
+        <div class="peel-row p-p"><div class="peel-letter">P</div><div class="peel-content">Motion capture (MoCap) technology records the physical movements of human performers and applies that data to digital 3D characters, offering significant advantages over traditional hand-keyframed animation for a short animated film. <span class="mark-chip">1 mark</span></div></div>
+        <div class="peel-row p-e1"><div class="peel-letter">E</div><div class="peel-content">The primary advantage is realism — MoCap captures the natural, fluid movement of a real human body, including subtle weight shifts, secondary motion, and micro-expressions, which are extraordinarily difficult and time-consuming to replicate through manual keyframing. This produces characters that feel convincing and relatable to audiences. <span class="mark-chip mk-2">1 mark</span></div></div>
+        <div class="peel-row p-e2"><div class="peel-letter">E</div><div class="peel-content">MoCap also significantly reduces the time and labour required for complex action sequences. A ten-second fight scene that might take an animator weeks to keyframe can be captured in a single session with an actor. Furthermore, the captured motion data is reusable — the same performance can be applied to multiple different character rigs, adding long-term value to the investment. <span class="mark-chip mk-2">1 mark</span></div></div>
+        <div class="peel-row p-l"><div class="peel-letter">L</div><div class="peel-content">For a short animated film with a limited budget, selectively using MoCap for complex performance scenes — while relying on traditional techniques for simpler shots — can strike an effective balance between production cost, efficiency, and the visual quality needed to make the film engaging and marketable. <span class="mark-chip mk-3">1 mark</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-header"><span class="q-type-badge qb-ext">Extended Response</span><span class="q-marks">5 marks</span></div>
+    <div class="q-text">Describe the characteristics of virtual reality technology and explain how it has been used in ONE industry application to benefit users.</div>
+    <button class="q-expand-btn"><span class="arrow">▶</span> Show model answer</button>
+    <div class="q-answer">
+      <div class="model-label ml-steel">STEEL Format</div>
+      <div class="peel-block">
+        <div class="peel-row p-s"><div class="peel-letter">S</div><div class="peel-content">Virtual Reality (VR) is an immersive technology that replaces the user's real-world environment with a fully digital, interactive 3D environment experienced through a head-mounted display (HMD). <span class="mark-chip">1 mark</span></div></div>
+        <div class="peel-row p-t"><div class="peel-letter">T</div><div class="peel-content">The key characteristics of VR include immersion (complete visual replacement of the real world), interactivity (user actions change the environment in real time), and believability (the experience is convincing enough to produce genuine physiological and psychological responses). Technical components include HMDs providing stereoscopic vision, 6-degrees-of-freedom tracking, spatial audio, and haptic feedback controllers. <span class="mark-chip mk-2">1 mark</span></div></div>
+        <div class="peel-row p-e1"><div class="peel-letter">E</div><div class="peel-content">In medical training, VR has been used to create surgical simulators where trainee surgeons can practise complex procedures in a fully immersive, risk-free environment. Systems such as Osso VR allow trainees to repeat procedures as many times as needed without any consequence of error — a patient is never at risk. <span class="mark-chip mk-2">1 mark</span></div></div>
+        <div class="peel-row p-e2"><div class="peel-letter">E</div><div class="peel-content">Research has shown that surgeons who trained using VR simulators performed significantly better in real operating rooms, making fewer errors and completing procedures more efficiently than those trained using traditional methods alone. This directly benefits patient safety outcomes. <span class="mark-chip mk-3">1 mark</span></div></div>
+        <div class="peel-row p-l"><div class="peel-letter">L</div><div class="peel-content">VR therefore offers a transformative benefit in any high-stakes training environment — it provides the realism of real-world experience with the safety and repeatability of simulation, fundamentally changing how professionals in medicine, aviation, and emergency services develop and maintain critical skills. <span class="mark-chip mk-top">1 mark</span></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer><p>HSC Multimedia Technologies Study Hub &nbsp;·&nbsp; Animation &amp; VR &nbsp;·&nbsp; For educational use only</p></footer>
+<script src="nav.js" defer></script>
+</body></html>
+HTMLEOF
+echo "animation done"
+Output
+
+animation done
