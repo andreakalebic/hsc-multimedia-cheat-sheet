@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSC Multimedia Cheat Sheet 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .exam-date {
+            background: #ff6b6b;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            display: inline-block;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 20px 0;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .priority-legend {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        
+        .priority-legend h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+        }
+        
+        .legend-icon {
+            font-size: 1.5em;
+            margin-right: 15px;
+        }
+        
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .topic-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .topic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border-color: #667eea;
+        }
+        
+        .topic-card.critical {
+            border-left: 5px solid #ff6b6b;
+            background: linear-gradient(to right, #fff5f5 0%, white 100%);
+        }
+        
+        .topic-card.high {
+            border-left: 5px solid #ffa500;
+            background: linear-gradient(to right, #fff9f0 0%, white 100%);
+        }
+        
+        .topic-card.moderate {
+            border-left: 5px solid #4ecdc4;
+            background: linear-gradient(to right, #f0fffe 0%, white 100%);
+        }
+        
+        .priority-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5em;
+        }
+        
+        .topic-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        .topic-card p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.9em;
+        }
+        
+        .topic-card a {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        
+        .topic-card a:hover {
+            background: #764ba2;
+        }
+        
+        .never-tested {
+            background: #ff6b6b !important;
+            animation: glow 2s infinite;
+        }
+        
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 5px #ff6b6b; }
+            50% { box-shadow: 0 0 20px #ff6b6b; }
+        }
+        
+        .formula-box {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .formula-box h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .formula {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+            color: #333;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+            color: #666;
+        }
+        
+        .stats-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 HSC Industrial Technology</h1>
+            <h2>Multimedia Technologies Cheat Sheet 2026</h2>
+            <div class="exam-date">
+                ⏰ HSC Exam: October 2026
+            </div>
+        </header>
+
+        <div class="stats-box">
+            <div class="stat-item">
+                <span class="stat-number">12</span>
+                <span class="stat-label">Content Areas</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">180+</span>
+                <span class="stat-label">Practice Questions</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">3</span>
+                <span class="stat-label">Never Tested Topics</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">11</span>
+                <span class="stat-label">Years Analyzed</span>
+            </div>
+        </div>
+
+        <div class="priority-legend">
+            <h2>📊 Priority System (Based on 2015-2025 Exam Analysis)</h2>
+            <div class="legend-item">
+                <span class="legend-icon">🔥🔥🔥</span>
+                <div>
+                    <strong>CRITICAL PRIORITY</strong> - Never tested OR 7+ year gap OR student weakness
+                </div>
+            </div>
+            <div class="legend-item">
+                <span class="legend-icon">🔥🔥</span>
+                <div>
+                    <strong>HIGH PRIORITY</strong> - Frequently tested (5+ times) OR 3-5 year gap
+                </div>
+            </div>
+            <div class="legend-item">
+                <span class="legend-icon">🔥</span>
+                <div>
+                    <strong>MODERATE PRIORITY</strong> - Regularly tested, foundational knowledge
+                </div>
+            </div>
+        </div>
+
+        <div class="formula-box">
+            <h3>⚡ Quick Formula Reference</h3>
+            <div class="formula">
+                <strong>File Size:</strong> Width × Height × Bit Depth ÷ 8 ÷ 1024 ÷ 1024 = MB
+            </div>
+            <div class="formula">
+                <strong>Transfer Time:</strong> File Size (MB) × 8 ÷ Speed (Mbps) = seconds
+            </div>
+            <div class="formula">
+                <strong>Storage Capacity:</strong> Total Storage ÷ File Size = Number of Files
+            </div>
+        </div>
+
+        <h2 style="margin: 40px 0 20px 0; color: #667eea;">🚨 CRITICAL PRIORITY - Study These First!</h2>
+        
+        <div class="topics-grid">
+            <div class="topic-card critical">
+                <div class="priority-badge">🔥🔥🔥</div>
+                <h3>Sectors Within Multimedia Industry</h3>
+                <p><strong>⚠️ NEVER TESTED IN 11 YEARS</strong></p>
+                <p>Film/TV, gaming, web design, advertising, animation, VR/AR, streaming, social media</p>
+                <a href="sectors.html">Study Now →</a>
+            </div>
+
+            <div class="topic-card critical">
+                <div class="priority-badge">🔥🔥🔥</div>
+                <h3>Career Opportunities</h3>
+                <p><strong>⚠️ NEVER TESTED IN 11 YEARS</strong></p>
+                <p>Entry-level positions, training pathways, career progression, gender issues</p>
+                <a href="careers.html">Study Now →</a>
+            </div>
+
+            <div class="topic-card critical">
+                <div class="priority-badge">🔥🔥🔥</div>
+                <h3>Legislation</h3>
+                <p><strong>⚠️ 11-YEAR GAP (Last tested 2015)</strong></p>
+                <p>Local, state, federal laws affecting multimedia industry</p>
+                <a href="legislation.html">Study Now →</a>
+            </div>
+
+            <div class="topic-card critical">
+                <div class="priority-badge">🔥🔥🔥</div>
+                <h3>File Types & Compression</h3>
+                <p><strong>Student Weakness + Frequently Tested</strong></p>
+                <p>Lossless vs lossy, image/audio/video formats, compression techniques</p>
+                <a href="file-types.html">Study Now →</a>
+            </div>
+
+            <div class="topic-card critical">
+                <div class="priority-badge">🔥🔥🔥</div>
+                <h3>Virtual Reality</h3>
+                <p><strong>Student Weakness + Hot Topic (2019-2025)</strong></p>
+                <p>Immersive vs non-immersive, hardware, applications, advantages/disadvantages</p>
+                <a href="virtual-reality.html">Study Now →</a>
+            </div>
+
+            <div class="topic-card critical">
+                <div class="priority-badge">🔥🔥🔥</div>
+                <h3>Calculations</h3>
+                <p><strong>Appears in EVERY Exam</strong></p>
+                <p>File size, transfer time, storage capacity, costing calculations</p>
+                <a href="calculations.html">Study Now →</a>
+            </div>
+
+            <div class="topic-card critical">
+                <div class="priority-badge">🔥🔥🔥</div>
+                <h3>Copyright & Intellectual Property</h3>
+                <p><strong>Tested 2015, 2016, 2018, 2021, 2023, 2024</strong></p>
+                <p>Copyright Act, licensing, fair use, ethical implications</p>
+                <a href="copyright.html">Study Now →</a>
+            </div>
+        </div>
+
+        <h2 style="margin: 40px 0 20px 0; color: #ffa500;">🔥 HIGH PRIORITY - Core Knowledge</h2>
+        
+        <div class="topics-grid">
+            <div class="topic-card high">
+                <div class="priority-badge">🔥🔥</div>
+                <h3>Vector vs Bitmap Graphics</h3>
+                <p><strong>Tested 2016, 2017, 2021, 2024, 2025</strong></p>
+                <p>Scalability, file size, use cases, software examples</p>
+                <a href="vector-bitmap.html">Study Now →</a>
+            </div>
+
+            <div class="topic-card high">
+                <div class="priority-badge">🔥🔥</div>
+                <h3>Audio Sampling</h3>
+                <p><strong>Tested 2015, 2017, 2021, 2023</strong></p>
+                <p>Sample rate, sample size, bit depth, analogue to digital conversion</p>
+                <a href="audio-sampling.html">Study Now →</a>
+            </div>
+
+            <div class="topic-card high">
+                <div class="priority-badge">🔥🔥</div>
+                <h3>Work Health & Safety (WHS)</h3>
+                <p><strong>Extended Response 2019, 2022, 2024</strong></p>
+                <p>Risk assessment, hierarchy of control, PPE, ergonomics</p>
+                <a href="whs.html">Study Now →</a>
+            </div>
+
+            <div class="topic-card high">
+                <div class="priority-badge">🔥🔥</div>
+                <h3>Environmental Factors</h3>
+                <p><strong>Extended Response 2018, 2020, 2025</strong></p>
+                <p>E-waste, recycling, sustainability, legislative requirements</p>
+                <a href="environmental.html">Study Now →</a>
+            </div>
+
+            <div class="topic-card high">
+                <div class="priority-badge">🔥🔥</div>
+                <h3>Personnel & Industrial Relations</h3>
+                <p><strong>Extended Response 2017, 2019, 2021 (5-year gap)</strong></p>
+                <p>Unions, contracts, EEO, training, multi-skilling</p>
+                <a href="personnel.html">Study Now →</a>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>📚 Study Strategy:</strong> Start with 🔥🔥🔥 CRITICAL topics, then move to 🔥🔥 HIGH priority</p>
+            <p style="margin-top: 10px;">Based on 11 years of HSC exam analysis (2015-2025)</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Last Updated: May 2026</p>
+        </footer>
+    </div>
+</body>
+</html>
